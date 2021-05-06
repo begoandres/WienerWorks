@@ -1,0 +1,92 @@
+@import 'variables';
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+header > .container-fluid {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.nav {
+  height: 80px;
+}
+
+.nav > li > a:hover{
+    color: gray;
+}
+
+.nav > li > a{
+    color: white;
+    padding-top: 25px;
+}
+
+.nav > li > img {
+  width: 150px;
+  padding-top: 10px;
+  // height: auto;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+#cont-main {
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.col-lg-6 > h2 {
+  text-align: center;
+
+}
+
+#row-message {
+  height: 70px;
+}
+
+#message {
+  // max-width: 500px;
+  width: 50%;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: -150px;
+  margin-bottom: 150px;
+  background-color: #b51616;
+}
+
+#center{
+  background-color: #b51616;
+  text-align: center;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#center > h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 15px;
+}
+
+footer> p {
+  color: white;
+}
