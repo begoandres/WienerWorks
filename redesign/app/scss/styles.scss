@@ -37,6 +37,9 @@ header {
       color: white;
       padding-top: 25px;
     }
+    .active {
+      color: $red;
+    }
 
     img {
       width: 150px;
@@ -54,7 +57,7 @@ header {
 #cont-main {}
 
 #table {
-  @include bigPadding();
+  @include smallPadding();
 }
 
 h2 {
@@ -152,16 +155,52 @@ h2 {
   }
 }
 
+.btn-danger {
+  margin-top: 70px;
+}
+
+
 h5 {
   @include smallPadding();
 }
 
 footer {
   text-align: center;
-  padding-top: 80px;
-  padding-bottom: 15px;
+  padding-top: 100px;
+  padding-bottom: 20px;
 
   p {
     color: white;
+  }
+}
+
+
+////////////Specific styling for the menu page------------------
+.col-lg-6 {
+  @include bigPadding();
+  h2 {
+    padding-top: 0;
+  }
+}
+
+
+.my-pic {
+  padding: 0;
+  background-color: blue;
+
+}
+
+.little-msg {
+  color: gray;
+  font-size: small;
+}
+
+#order-div {
+
+  a{
+    margin: 0;
+    height: 100px;
+    font-family: 'Graduate', cursive;
+    font-size: 50px;
   }
 }
