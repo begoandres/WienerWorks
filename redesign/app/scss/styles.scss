@@ -1,34 +1,49 @@
 @import 'variables';
-
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
-.container-fluid {
-  padding-right: 0px;
-  padding-left: 0px;
+$red: #b51616;
+$green: #1b5248;
+
+@mixin bigPadding () {
+  padding: 50px;
+}
+@mixin smallPadding () {
+  padding: 15px;
+}
+@mixin smallMargin() {
+  margin: 15px;
 }
 
-header > .container-fluid {
-  max-height: 400px;
-  overflow: hidden;
+.container-fluid {
+  padding: 0;
+}
+
+header {
+  .container-fluid {
+    max-height: 400px;
+    overflow: hidden;
+  }
 }
 
 .nav {
   height: 80px;
-}
 
-.nav > li > a:hover{
-    color: gray;
-}
+  li {
+    a:hover {
+      color: gray;
+    }
 
-.nav > li > a{
-    color: white;
-    padding-top: 25px;
-}
+    a {
+      color: white;
+      padding-top: 25px;
+    }
 
-.nav > li > img {
-  width: 150px;
-  padding-top: 10px;
-  // height: auto;
+    img {
+      width: 150px;
+      padding-top: 10px;
+      // height: auto;
+    }
+  }
 }
 
 .img-fluid {
@@ -36,16 +51,18 @@ header > .container-fluid {
   height: auto;
 }
 
-#cont-main {
-  padding-right: 50px;
-  padding-left: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+#cont-main {}
+
+#table {
+  @include bigPadding();
 }
 
-.col-lg-6 > h2 {
+h2 {
   text-align: center;
-
+  padding-bottom: 20px;
+  font-family: 'Graduate', cursive;
+  font-size: 50px;
+  padding-top: 10px;
 }
 
 #row-message {
@@ -55,38 +72,96 @@ header > .container-fluid {
 #message {
   // max-width: 500px;
   width: 50%;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  @include smallPadding();
   margin-top: -150px;
   margin-bottom: 150px;
-  background-color: #b51616;
+  background-color: $red;
 }
 
-#center{
-  background-color: #b51616;
+#center {
+  background-color: $red;
   text-align: center;
   color: white;
   border-color: white;
   border-style: solid;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  @include smallPadding();
 }
 
-#center > h2 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+#center > h2, #me>h2 {
+  color: white;
+}
+
+#info {
+  h2 {
+    padding-top: 50px;
+  }
+}
+
+
+
+//Styling for the carousel
+
+.carousel {
+  @include bigPadding();
+  width: 80%;
+  background-color: white;
+  background-color: rgba(255,255,255,.5);
+  margin: auto;
+
+  .carousel-inner {
+    .carousel-item {
+      height: auto;
+      @include smallPadding;
+
+      .col-md {
+        @include smallMargin;
+        @include smallPadding;
+        // margin-right: 15px;
+        background-color: white;
+        background-color: rgba(255,255,255,.75);
+      }
+
+      a {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .carousel-control-prev-icon {
+    margin-left: -200px;
+  }
+
+  .carousel-control-next-icon {
+    margin-right: -200px;
+  }
+}
+
+.flex-column {
+  text-align: center;
+}
+
+#me {
+  background-attachment: fixed;
+  background-image: url("https://cdn.shopify.com/s/files/1/1619/4221/products/HJ09087_1024x1024@2x.jpg?v=1597959921");
+  // background: linear-gradient($green, $red);
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  h2 {
+    padding-bottom: 40px;
+  }
+}
+
+h5 {
+  @include smallPadding();
 }
 
 footer {
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 15px;
-}
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 15px;
 
-footer> p {
-  color: white;
+  p {
+    color: white;
+  }
 }
