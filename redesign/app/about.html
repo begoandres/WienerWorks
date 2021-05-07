@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weiner Works</title>
+  <meta name="description" content="Wiener Works Hot Dogs">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon"
-      type="image/png"
-      href="assets/logoEmpty.png">
+  <link rel="icon" type="image/png" href="assets/logoEmpty.png" alt="Wiener Works Logo">
   <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 </head>
 
@@ -17,7 +16,7 @@
     <ul class="nav bg-info justify-content-center">
 
       <li class="nav-item">
-        <img src="assets/logoEmpty.png" class="img-fluid" alt="Responsive image">
+        <img src="assets/logoEmpty.png" class="img-fluid" alt="Responsive image" alt="Wiener Works Logo">
       </li>
 
       <li class="nav-item">
@@ -31,7 +30,10 @@
       </li>
     </ul>
     <div class="container-fluid">
-      <img src="assets/store.png" class="img-fluid" alt="Responsive image">
+      <img src="assets/store.png" class="img-fluid" alt="Restaurant view">
+    </div>
+    <div class="container-fluid">
+      <img src="assets/greencheck2.png" class="img-fluid" alt="Green and white checkers">
     </div>
   </header>
 
@@ -39,30 +41,53 @@
     <div class="container-fluid" id="table">
 
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-4 old-cont">
+          <img src="assets/old.png" class="img-fluid" alt="Old Restaurant View">
+        </div>
+        <div class="col-md-8 old-cont">
           <h2>
-            Directions
+            About Us
           </h2>
           <p>
-            Website for Wiener Works redesign project
+            Based in Sacramento, CA, we've been offering Hot Dogs for more than 30 years. Focusing on simplicity (and quantity!), we offer the best homemade hot dogs in the area.
+          </p>
+          <p>
+            You won't regret coming in for the best ambiance and fun memories vibe! Try us for an informal family reuninon, a chill hang out with your friends... or just by yourself for some delicious hot dog cravings!
           </p>
         </div>
-        <div class="col-lg-6">
-          <h2>
-            Services
-          </h2>
-          <ul>
-            <li>
-              <p>Takout</p>
-            </li>
-            <li>
-              <p>Delivery</p>
-            </li>
-            <li>
-              <p>Sit-down dining</p>
-            </li>
-          </ul>
-        </div>
+      </div>
+
+
+      <div class="row d-flex flex-column old-cont">
+        <h3>Have any questions? Send us a message!
+        </h3>
+
+<!-- Form -->
+        <form>
+          <div class="form-row">
+            <div class="col">
+              <label for="exampleFormControlTextarea1">First Name</label>
+              <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col">
+              <label for="exampleFormControlTextarea1">Last Name</label>
+              <input type="text" class="form-control" placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md">
+              <label for="inputEmail4">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md">
+              <label for="exampleFormControlTextarea1">Message</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Type your awesome message here..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-danger btn-form">Submit</button>
+        </form>
       </div>
     </div>
 

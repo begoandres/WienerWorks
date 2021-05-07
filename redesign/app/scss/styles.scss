@@ -37,6 +37,7 @@ header {
       color: white;
       padding-top: 25px;
     }
+
     .active {
       color: $red;
     }
@@ -44,7 +45,6 @@ header {
     img {
       width: 150px;
       padding-top: 10px;
-      // height: auto;
     }
   }
 }
@@ -73,11 +73,9 @@ h2 {
 }
 
 #message {
-  // max-width: 500px;
   width: 50%;
   @include smallPadding();
   margin-top: -150px;
-  margin-bottom: 150px;
   background-color: $red;
 }
 
@@ -90,7 +88,8 @@ h2 {
   @include smallPadding();
 }
 
-#center > h2, #me>h2 {
+#center > h2,
+#me > h2 {
   color: white;
 }
 
@@ -99,8 +98,6 @@ h2 {
     padding-top: 50px;
   }
 }
-
-
 
 //Styling for the carousel
 
@@ -159,7 +156,6 @@ h2 {
   margin-top: 70px;
 }
 
-
 h5 {
   @include smallPadding();
 }
@@ -174,15 +170,15 @@ footer {
   }
 }
 
-
 ////////////Specific styling for the menu page------------------
-.col-lg-6 {
+
+.col-md-6 {
   @include bigPadding();
+
   h2 {
     padding-top: 0;
   }
 }
-
 
 .my-pic {
   padding: 0;
@@ -194,11 +190,103 @@ footer {
 }
 
 #order-div {
-
-  a{
+  a {
     margin: 0;
     height: 100px;
     font-family: 'Graduate', cursive;
     font-size: 50px;
   }
+}
+
+////////////Specific styling for the about page------------------
+
+.old-cont {
+  @include bigPadding();
+}
+
+form {
+  width: 80%;
+  margin: auto;
+
+  .form-row {
+    padding-bottom: 15px;
+  }
+
+  .btn-form {
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+}
+
+h3 {
+  @extend h2;
+  font-size: 30px;
+  padding-bottom: 80px;
+}
+
+
+//avoid message box to cross with business info section
+@media screen and (max-width: 790px) {
+  h2 {
+    font-size: 40px;
+  }
+}
+
+
+//media query for medium sized screens
+@media screen and (max-width: 768px) {
+
+  //avoid message box to cross with business info section
+  #info {
+    padding-top: 120px;
+  }
+
+  #order-div {
+    a {
+      font-size: 40px;
+    }
+  }
+
+  //change the order of the pictures so that they go after the text
+  .my-pic {
+    order: 2;
+  }
+
+
+}
+
+//media query for smaller screens
+@media screen and (max-width: 576px) {
+  #message {
+    width: 80%;
+    @include smallPadding();
+    margin-top: -50px;
+  }
+  //avoid message box to cross with business info section
+  #info {
+    padding-top: 180px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  #order-div {
+    a {
+      font-size: 30px;
+    }
+  }
+
+}
+
+//super small screens
+@media screen and (max-width: 400px) {
+  p, label{
+    font-size: 12px;
+  }
+
+  .carousel {
+    padding: 5px;
+  }
+
 }
